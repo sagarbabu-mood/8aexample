@@ -1,0 +1,28 @@
+get http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+get http://localhost:4000/todos/?priority=HIGH
+
+
+###
+get http://localhost:4000/todos/10/
+
+###
+post http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+###
+PUT http://localhost:3000/todos/10/
+Content-Type: application/json
+
+{ "priority": "HIGH" }
+
+###
+DELETE http://localhost:3003/todos/4/
